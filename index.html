@@ -1,178 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casa Laura Catering | Coffee break y catering</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Casa Laura Catering</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
     body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: #222;
-      background: #fff;
       line-height: 1.5;
     }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
     header {
-      border-bottom: 1px solid #eee;
-      padding: 16px 40px;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #eee;
     }
-
-    nav a {
-      margin-left: 24px;
+    header nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #222;
       font-weight: 500;
     }
-
     .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
     }
-
-    /* HERO */
     .hero {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
       align-items: center;
     }
-
     .hero h1 {
       font-size: 48px;
-      line-height: 1.1;
       margin-bottom: 20px;
     }
-
     .hero p {
       font-size: 18px;
       color: #555;
-      margin-bottom: 24px;
+      margin-bottom: 30px;
     }
-
-    .buttons {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 20px;
+    .buttons a {
+      display: inline-block;
+      margin-right: 15px;
+      padding: 14px 22px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
     }
-
     .btn-primary {
       background: #000;
       color: #fff;
-      padding: 14px 22px;
-      border-radius: 8px;
-      font-weight: bold;
     }
-
-    .btn-secondary {
+    .btn-outline {
       border: 1px solid #000;
-      padding: 14px 22px;
-      border-radius: 8px;
-      font-weight: bold;
+      color: #000;
     }
-
-    .badges {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .badge {
-      border: 1px solid #ddd;
+    .badges span {
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 10px;
+      padding: 6px 12px;
       border-radius: 20px;
-      padding: 6px 14px;
       font-size: 14px;
+      background: #f2f2f2;
     }
-
     .hero img {
       width: 100%;
-      height: 420px;
-      object-fit: cover;
-      border-radius: 12px;
+      border-radius: 16px;
     }
-
-    /* SECTIONS */
-    h2 {
+    section {
+      margin-top: 80px;
+    }
+    section h2 {
       text-align: center;
-      font-size: 32px;
-      margin-bottom: 12px;
+      font-size: 36px;
+      margin-bottom: 15px;
     }
-
     .section-intro {
       text-align: center;
-      color: #555;
       max-width: 700px;
       margin: 0 auto 40px;
-    }
-
-    /* CATALOGO */
-    .catalogo img {
-      width: 100%;
-      margin-bottom: 40px;
-      border: 1px solid #eee;
-      border-radius: 8px;
-    }
-
-    /* GALERIA */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid #eee;
-      padding: 40px 20px;
-      text-align: center;
-      margin-top: 60px;
-      font-size: 14px;
       color: #555;
     }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .hero img {
-        height: 300px;
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    .price-images img {
+      width: 100%;
+      max-width: 800px;
+      display: block;
+      margin: 40px auto;
+      border-radius: 16px;
     }
-
-    @media (max-width: 520px) {
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 36px;
-      }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 14px;
+    }
+    footer {
+      background: #fafafa;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 80px;
+      font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
@@ -188,80 +126,75 @@
   </nav>
 </header>
 
-<main class="container">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div>
-      <h1>Coffee break y catering<br>con toque casero.</h1>
-      <p>
-        Servicios para eventos personales y corporativos en San Pedro de la Paz y alrededores.
-      </p>
-
-      <div class="buttons">
-        <a class="btn-primary"
-           href="https://wa.me/56998147320?text=Hola,%20quisiera%20cotizar%20un%20servicio%20de%20coffee%20break">
-          Cotiza por WhatsApp
-        </a>
-        <a class="btn-secondary" href="#catalogo">
-          Ver opciones y precios
-        </a>
-      </div>
-
-      <div class="badges">
-        <span class="badge">✔ Puntualidad</span>
-        <span class="badge">✔ Presentación</span>
-        <span class="badge">✔ Variedad</span>
-      </div>
-    </div>
-
-    <img src="assets/img/hero.jpg" alt="Montaje Casa Laura Catering">
-  </section>
-
-  <!-- CATALOGO -->
-  <section id="catalogo" class="catalogo">
-    <h2>Opciones de coffee break</h2>
-    <p class="section-intro">
-      Opciones pensadas para reuniones, capacitaciones y eventos corporativos.
-      Puedes elegir entrega (autoservicio) o servicio completo con atención.
+<div class="container hero">
+  <div>
+    <h1>Coffee break y catering con toque casero.</h1>
+    <p>
+      Servicios de coffee break, <strong>coctelería dulce y salada</strong> y catering
+      para eventos personales y corporativos en San Pedro de la Paz y alrededores.
+      <br><strong>Solicita nuestro catálogo de coctelería por WhatsApp.</strong>
     </p>
 
-    <img src="assets/img/lista_precios_coffee_autoservicio.jpg"
-         alt="Precios coffee break autoservicio">
-
-    <img src="assets/img/precios_coffee_servicio_completo.jpg"
-         alt="Precios coffee break servicio completo">
-  </section>
-
-  <!-- GALERIA -->
-  <section id="galeria">
-    <h2>Galería</h2>
-    <p class="section-intro">
-      Montajes y preparaciones realizadas en eventos y reuniones.
-    </p>
-
-    <div class="gallery-grid">
-      <img src="assets/img/gal-1.jpg" alt="Galería Casa Laura">
-      <img src="assets/img/gal-2.jpg" alt="Galería Casa Laura">
-      <img src="assets/img/gal-3.jpg" alt="Galería Casa Laura">
-      <img src="assets/img/gal-4.jpg" alt="Galería Casa Laura">
-      <img src="assets/img/gal-5.jpg" alt="Galería Casa Laura">
-      <img src="assets/img/gal-6.jpg" alt="Galería Casa Laura">
-      <img src="assets/img/gal-7.jpg" alt="Galería Casa Laura">
-      <img src="assets/img/gal-8.jpg" alt="Galería Casa Laura">
-      <img src="assets/img/gal-9.jpg" alt="Galería Casa Laura">
+    <div class="buttons">
+      <a class="btn-primary"
+         href="https://wa.me/56998147320?text=Hola,%20quisiera%20que%20me%20env%C3%ADen%20el%20cat%C3%A1logo%20de%20cocteler%C3%ADa%20de%20Casa%20Laura">
+        Solicitar catálogo de coctelería
+      </a>
+      <a class="btn-outline" href="#catalogo">
+        Ver opciones y precios
+      </a>
     </div>
-  </section>
 
-</main>
+    <div class="badges">
+      <span>✔ Puntualidad</span>
+      <span>✔ Presentación</span>
+      <span>✔ Variedad</span>
+    </div>
+  </div>
+
+  <img src="assets/img/hero.jpg" alt="Montaje Casa Laura Catering">
+</div>
+
+<section id="catalogo" class="container">
+  <h2>Opciones de coffee break</h2>
+  <p class="section-intro">
+    Opciones pensadas para reuniones, capacitaciones y eventos corporativos.
+    Puedes elegir entrega (autoservicio) o servicio completo con atención.
+  </p>
+
+  <p class="section-intro">
+    También contamos con un <strong>catálogo de coctelería dulce y salada</strong>.
+    Puedes solicitarlo directamente por WhatsApp para revisar opciones y valores.
+  </p>
+
+  <div class="price-images">
+    <img src="assets/img/lista_precios_coffee_autoservicio.jpg" alt="Precios coffee break autoservicio">
+    <img src="assets/img/precios_coffee_servicio_completo.jpg" alt="Precios coffee break servicio completo">
+  </div>
+</section>
+
+<section id="galeria" class="container">
+  <h2>Galería</h2>
+  <div class="gallery">
+    <img src="assets/img/gal-1.jpg">
+    <img src="assets/img/gal-2.jpg">
+    <img src="assets/img/gal-3.jpg">
+    <img src="assets/img/gal-4.jpg">
+    <img src="assets/img/gal-5.jpg">
+    <img src="assets/img/gal-6.jpg">
+    <img src="assets/img/gal-7.jpg">
+    <img src="assets/img/gal-8.jpg">
+    <img src="assets/img/gal-9.jpg">
+  </div>
+</section>
 
 <footer id="contacto">
   <p>
-    Casa Laura Catering · Coffee break y catering con toque casero<br>
-    San Pedro de la Paz y alrededores · WhatsApp +56 9 9814 7320
+    Casa Laura Catering · Coffee break, coctelería y catering con toque casero<br>
+    Solicita nuestro catálogo de coctelería por WhatsApp · +56 9 9814 7320<br>
+    San Pedro de la Paz y alrededores
   </p>
 </footer>
 
 </body>
 </html>
-
